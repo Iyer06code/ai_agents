@@ -15,10 +15,10 @@ def isprime(num: int) -> bool:
 
 def get_weather(city: str) -> str:
     """Get weather for a given city."""
-    return f"It's always sunny in {city}!"
+    return f"It's always sunny and goood in {city}!"
 
 model = ChatGoogleGenerativeAI(
-    model="gemini-3-flash-preview",
+    model="gemini-2.5-flash",
     temperature=1.0,
 )
 
@@ -30,7 +30,7 @@ agent = create_agent(
 
 # Run the agent
 response = agent.invoke(
-    {"messages": [{"role": "user", "content": "what is the weather in Mysore and is 2001 prime? and send an email to 4mh23cs129a@gmail.com with the subject 'Test Email from Python' and content 'Hello 👋\nThis email was sent using Python!'about the weather and result prime number"}]}
+    {"messages": [{"role": "user", "content": "what is the weather in Mysore and is 2001 prime? and send an email to nandishd2005@gmail.com with the subject 'Test Email from Python' and content 'Hello 👋\nThis email was sent using Python!'about the weather and result prime number"}]}
 )
 
 # Print only the final AI response
